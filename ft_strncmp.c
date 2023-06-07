@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t				i;
-	unsigned char		*tcs1;
-	unsigned char		*tcs2;
+	size_t			i;
+	unsigned char	*tcs1;
+	unsigned char	*tcs2;
 
 	tcs1 = (unsigned char *)s1;
 	tcs2 = (unsigned char *)s2;

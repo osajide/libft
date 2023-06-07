@@ -6,26 +6,25 @@
 /*   By: osajide <osajide@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:52:06 by osajide           #+#    #+#             */
-/*   Updated: 2022/10/07 12:09:32 by osajide          ###   ########.fr       */
+/*   Updated: 2023/06/07 23:23:40 by osajide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	if (n == -2147483648)
-		write (fd, "-2147483648", 11);
-	else if (n >= 0 && n <= 9)
-		ft_putchar_fd((n + '0'), fd);
-	else if (n < 0)
+	long int	n;
+	char		c;
+
+	n = nb;
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		ft_putnbr_fd((n * -1), fd);
+		n = n * -1;
 	}
-	else
-	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putnbr_fd((n % 10), fd);
-	}
+	if ((n / 10))
+		ft_putnbr_fd(n / 10, 1);
+	c = n % 10 + 48;
+	write(1, &c, 1);
 }

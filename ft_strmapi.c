@@ -6,12 +6,11 @@
 /*   By: osajide <osajide@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:10:02 by osajide           #+#    #+#             */
-/*   Updated: 2022/10/24 10:42:34 by osajide          ###   ########.fr       */
+/*   Updated: 2023/06/07 23:31:22 by osajide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-#include<stdio.h>
+#include "libft.h"
 
 char	f(unsigned int i, char c)
 {
